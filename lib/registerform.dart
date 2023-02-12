@@ -11,6 +11,9 @@ class _MyregisterState extends State<Myregister> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/register.png'), fit: BoxFit.cover)),
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.transparent,
@@ -20,11 +23,11 @@ class _MyregisterState extends State<Myregister> {
         body: Stack(
           children: [
             Container(
-              padding: EdgeInsets.only(top: 130, left: 35),
+              padding: EdgeInsets.only(top: 50, left: 35),
               child: Text(
                 'Create\n Account',
                 style: TextStyle(
-                  color: Color(0xff4c505b),
+                  color: Colors.white,
                   fontSize: 33,
                   fontWeight: FontWeight.bold,
                 ),
@@ -33,7 +36,7 @@ class _MyregisterState extends State<Myregister> {
             SingleChildScrollView(
               child: Container(
                 padding: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * 0.35,
+                    top: MediaQuery.of(context).size.height * 0.25,
                     left: MediaQuery.of(context).size.width * 0.2,
                     right: MediaQuery.of(context).size.width * 0.2),
                 child: Column(
@@ -109,7 +112,7 @@ class _MyregisterState extends State<Myregister> {
                         ),
                         TextButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, 'register');
+                              Navigator.pop(context);
                             },
                             child: Text(
                               'Sign in',

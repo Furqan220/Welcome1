@@ -12,6 +12,9 @@ class _LoginpageState extends State<Loginpage> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/login.png'), fit: BoxFit.cover)),
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: Stack(
@@ -21,7 +24,7 @@ class _LoginpageState extends State<Loginpage> {
               child: Text(
                 'Wellcome\n Back',
                 style: TextStyle(
-                  color: Color(0xff4c505b),
+                  color: Colors.white,
                   fontSize: 33,
                   fontWeight: FontWeight.bold,
                 ),
